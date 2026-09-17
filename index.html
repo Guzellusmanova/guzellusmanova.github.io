@@ -190,6 +190,45 @@
     .hero-bottom{animation:heroBottomIn .9s cubic-bezier(.16,.84,.44,1) .3s both;}
   }
 
+  .hero-tagline{
+    font-size:14px;font-weight:600;line-height:1.55;color:var(--ink);
+    padding:22px 24px 0;max-width:480px;
+  }
+  @media(min-width:900px){
+    .hero-tagline{flex-basis:100%;text-align:center;max-width:640px;margin:0 auto 4px;padding:0;font-size:15px;}
+  }
+
+  .hero-photo-cta{
+    position:absolute;z-index:3;
+    left:5%;top:60%;max-width:56%;
+    display:flex;align-items:center;gap:9px;
+    background:rgba(5,4,9,0.7);
+    backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+    border:1px solid var(--pink-dim);border-radius:13px;
+    padding:11px 13px;
+    box-shadow:0 0 0 1px rgba(232,87,141,0.12), 0 10px 24px -10px rgba(232,87,141,0.45);
+    transition:border-color .25s, transform .25s, box-shadow .25s;
+  }
+  .hero-photo-cta:hover{border-color:var(--pink);transform:translateY(-2px);box-shadow:0 0 0 1px rgba(232,87,141,0.28), 0 14px 30px -10px rgba(232,87,141,0.6);}
+  .hero-photo-cta-icon{flex:none;width:28px;height:28px;border-radius:50%;background:var(--pink);color:#180810;display:flex;align-items:center;justify-content:center;font-size:12px;}
+  .hero-photo-cta-txt{min-width:0;}
+  .hero-photo-cta-label{display:block;font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px;white-space:nowrap;}
+  .hero-photo-cta-title{display:block;font-family:'Unbounded';font-weight:700;font-size:11.5px;color:var(--ink);line-height:1.25;}
+  .hero-photo-cta-arrow{margin-left:auto;color:var(--pink-bright);font-size:14px;flex:none;}
+  @media(min-width:480px){
+    .hero-photo-cta{left:6%;max-width:50%;padding:13px 16px;gap:11px;}
+    .hero-photo-cta-icon{width:32px;height:32px;font-size:13px;}
+    .hero-photo-cta-label{font-size:10px;}
+    .hero-photo-cta-title{font-size:13px;}
+  }
+  @media(min-width:900px){
+    .hero-photo-cta{left:5.5%;top:59%;max-width:44%;padding:16px 19px;gap:13px;border-radius:15px;}
+    .hero-photo-cta-icon{width:38px;height:38px;font-size:15px;}
+    .hero-photo-cta-label{font-size:10.5px;}
+    .hero-photo-cta-title{font-size:14.5px;}
+    .hero-photo-cta-arrow{font-size:17px;}
+  }
+
   /* ===== SCROLL REVEAL ===== */
   .reveal{
     opacity:0;transform:translateY(30px);
@@ -239,6 +278,8 @@
   .section-head{max-width:680px;margin-bottom:56px;}
   .section-title{font-size:clamp(32px,4.4vw,50px);margin-top:14px;color:var(--ink);}
   .section-title .hl{color:var(--pink);}
+  .section-head.no-title{margin-bottom:24px;}
+  .method-title{overflow-wrap:break-word;word-break:break-word;line-height:1.08;}
 
   /* ===== ABOUT BLOCKS ===== */
   .about{background:var(--panel);}
@@ -384,6 +425,7 @@
   @media(min-width:800px){.method-cols{grid-template-columns:1fr 1fr;}}
   .method-cols p{color:var(--muted);font-size:16px;line-height:1.75;}
   .method-cols p+p{margin-top:16px;}
+  .method-cols .hl{color:var(--pink);font-weight:700;}
   .method-quote{
     margin-top:70px;padding-top:50px;border-top:1px solid var(--line);
     font-family:'Unbounded';font-weight:700;
@@ -394,7 +436,7 @@
   /* ===== PRICING ===== */
   .pricing{background:var(--panel);}
   .price-grid{display:grid;grid-template-columns:1fr;gap:24px;}
-  @media(min-width:760px){.price-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:760px){.price-grid{grid-template-columns:repeat(3,1fr);}}
   .price-card{
     background:var(--panel-2);
     border:1px solid var(--line);
@@ -599,9 +641,19 @@
 
 <header class="hero">
   <div class="hero-photo">
-    <img src="assets/hero-main.jpg" alt="Гузель Усманова — эксперт по блогингу и созданию контента">
+    <img src="assets/hero-main.webp" alt="Гузель Усманова — эксперт по блогингу и созданию контента">
+    <a href="https://t.me/guzell_usmanova" target="_blank" rel="noopener" class="hero-photo-cta">
+      <span class="hero-photo-cta-icon">✈</span>
+      <span class="hero-photo-cta-txt">
+        <span class="hero-photo-cta-label">Бесплатный Telegram-канал</span>
+        <span class="hero-photo-cta-title">Снимай легко с Гузель</span>
+      </span>
+      <span class="hero-photo-cta-arrow">→</span>
+    </a>
   </div>
+
   <div class="hero-bottom">
+    <p class="hero-tagline">Эксперт по блогингу, проявленности и созданию контента, который хочется снимать, а людям хочется смотреть</p>
     <div class="hero-stats">
       <div>
         <span class="stat-num" data-count="8" data-suffix=" лет">0</span>
@@ -618,6 +670,14 @@
     </div>
   </div>
 </header>
+
+<section class="final">
+  <div class="wrap">
+    <h2>Тебе не нужно <span class="hl">становиться идеальной</span>, чтобы иметь право проявляться</h2>
+    <p>Именно твоя неидеальность делает тебя уникальной и настоящей.</p>
+    <a href="#format" class="btn">Выбрать формат работы</a>
+  </div>
+</section>
 
 <section class="help">
   <div class="wrap">
@@ -674,9 +734,15 @@
 
     <p class="about-highlight">Завела блог с нуля. На лёгком контенте, без душной экспертности, за 2 месяца набрала <span class="hl">2 700 подписчиков</span>.</p>
 
-    <button class="about-toggle" id="aboutToggle">Читать всю историю<span class="plus">+</span></button>
+    <button class="about-toggle" id="aboutToggle">Нажми, чтобы узнать обо мне больше<span class="plus">+</span></button>
 
     <div class="about-grid" id="aboutGrid">
+      <div class="about-row">
+        <div class="eyebrow">Коротко</div>
+        <div>
+          <p>Помогаю найти ту самую изюминку блога, ради которой подписываются, а также помогаю преодолеть страх, стеснение и свободно проявляться в блоге.</p>
+        </div>
+      </div>
       <div class="about-row">
         <div class="eyebrow">8 лет в онлайне</div>
         <div>
@@ -693,7 +759,7 @@
       <div class="about-row">
         <div class="eyebrow">Что изменилось</div>
         <div>
-          <p><strong>Поэтому завела блог с нуля. На лёгком контенте, без душной экспертности, за 2 месяца набрала 2 700 подписчиков.</strong> Теперь на меня каждый день подписывается от 10 до 100 человек. А каждый пятый мой ролик залетает.</p>
+          <p>Теперь на меня каждый день подписывается от 10 до 100 человек. А каждый пятый мой ролик залетает.</p>
           <p>Я получаю тысячи комментариев от женщин, которые пишут, как хотят так же проявляться и быть такими же уверенными в кадре.</p>
         </div>
       </div>
@@ -725,16 +791,16 @@
   <div class="wrap">
     <div class="section-head">
       <div class="eyebrow">Как я работаю</div>
-      <h2 class="section-title">Сначала разбираемся <span class="hl">с тобой</span></h2>
+      <h2 class="section-title method-title">Сначала разбираемся <span class="hl">с тобой</span></h2>
     </div>
     <div class="method-cols">
       <div>
-        <p>Я не выдаю тебе пачку шаблонов со словами «снимай вот эти 30 Reels». Сначала мы разбираемся: что тебя реально цепляет, что ты умеешь, через что ты прошла, о чём можешь говорить часами.</p>
-        <p>Что тебе хочется показывать людям. Где ты сама себя тормозишь. Какая тема тебя зажигает, а какая вызывает только желание закрыть Instagram.</p>
+        <p>Я не выдаю тебе пачку шаблонов со словами «снимай вот эти 30 Reels». <span class="hl">Сначала мы разбираемся</span>: <span class="hl">что тебя реально цепляет</span>, что ты умеешь, через что ты прошла, о чём можешь говорить часами.</p>
+        <p>Что тебе хочется показывать людям. <span class="hl">Где ты сама себя тормозишь</span>. <span class="hl">Какая тема тебя зажигает</span>, а какая вызывает только желание закрыть Instagram.</p>
       </div>
       <div>
-        <p>Моя задача — не просто сказать тебе, что снять завтра. Моя задача сделать так, чтобы ты сама начала понимать, что тебе снимать, зачем и почему это будут смотреть именно твои люди.</p>
-        <p>Я соединяю две вещи: твою настоящую личность и инструменты, которые реально работают. Без необходимости выбирать между «быть собой» и «зарабатывать».</p>
+        <p>Моя задача — не просто сказать тебе, что снять завтра. Моя задача сделать так, чтобы ты <span class="hl">сама начала понимать, что тебе снимать, зачем и почему это будут смотреть именно твои люди</span>.</p>
+        <p>Я соединяю две вещи: <span class="hl">твою настоящую личность и инструменты, которые реально работают</span>. Без необходимости выбирать <span class="hl">между «быть собой» и «зарабатывать»</span>.</p>
       </div>
     </div>
     <div class="method-quote">Сейчас любую информацию можно получить за 2 минуты в <span class="hl">ChatGPT</span>. А вот твой внутренний огонь есть только у тебя, и его невозможно скопировать или нагуглить. Именно на это подписываются люди.</div>
@@ -743,26 +809,10 @@
 
 <section class="pricing" id="format">
   <div class="wrap">
-    <div class="section-head">
+    <div class="section-head no-title">
       <div class="eyebrow">Форматы работы</div>
-      <h2 class="section-title">С чего <span class="hl">начнём</span></h2>
     </div>
     <div class="price-grid">
-      <div class="price-card">
-        <div class="price-tag">Для начинающих</div>
-        <div class="price-name">Клуб «Шаг вперёд»</div>
-        <div class="price-value">1 490 ₽ / мес</div>
-        <p class="price-desc">Это пространство для людей, которые хотят вести блог легко, проявляться без страха и наконец понять, что именно им хочется показывать и говорить. Здесь мы будем учиться проявляться через контент и превращать блог в узнаваемый личный бренд и источник дохода.</p>
-        <ul class="price-list">
-          <li>Разборы и эфиры: живые разборы твоих профилей и Reels</li>
-          <li>Пошаговые уроки: темы, триггеры, сторителлинг, монтаж</li>
-          <li>Челленджи по Reels: 10-дневные практики внутри сообщества</li>
-          <li>Мощная поддержка: идеи для роликов, заголовки, чат единомышленников</li>
-        </ul>
-        <p class="price-note">Клуб открыт для всех, кто готов развивать свой блог в комфортном темпе и без насилия над собой.</p>
-        <a href="https://t.me/tribute/app?startapp=ep_zdhd9krGZtoaElPAUT2qdcFERHCLDNOuGyqBHT52AOFl2IwOK6l" target="_blank" rel="noopener" class="btn btn-ghost">Присоединиться к клубу</a>
-      </div>
-
       <div class="price-card">
         <div class="price-tag">Быстрый старт</div>
         <div class="price-name">Консультация</div>
@@ -785,10 +835,10 @@
         <ul class="price-list">
           <li>Чёткое понимание своей изюминки, ценностей и характера, которые мгновенно выделят тебя среди тысяч безликих блогов</li>
           <li>Избавление от страхов, стыда и неуверенности — ты начнёшь кайфовать от себя и легко говорить своим живым голосом</li>
-          <li>Готовая система и инструменты, с которыми темы будут рождаться сами из твоей жизни, без вымучивания и вечной погони за трендами</li>
-          <li>Упакованный честный аккаунт, который привлекает твоих людей и превращает блог в источник дохода без насилия над собой</li>
+          <li>Минимум 30 снятых Reels, которые ты создашь вместе со мной: от идеи и сценария до съёмки и публикации. Больше никаких «не знаю, что снимать»</li>
+          <li>Своя рабочая система контента: поймёшь, какие темы, форматы и подача работают именно для тебя, и сможешь дальше самостоятельно создавать контент без вечного поиска идей и копирования чужих блогов</li>
         </ul>
-        <a href="#apply" class="btn apply-link" data-tariff="Личная работа">Оставить заявку на предзапись</a>
+        <a href="#apply" class="btn btn-ghost apply-link" data-tariff="Личная работа">Оставить заявку на личную работу</a>
       </div>
 
       <div class="price-card">
@@ -829,7 +879,6 @@
         <select id="applyTariff" name="tariff">
           <option>Консультация</option>
           <option>Личная работа</option>
-          <option>Клуб «Шаг вперёд»</option>
           <option>Практикум «Минимани»</option>
         </select>
       </div>
@@ -854,33 +903,35 @@
       <h2 class="section-title">Результаты, <span class="hl">а не обещания</span></h2>
     </div>
     <div class="cases-grid">
-      <a class="case-card reveal" href="cases.html">
+      <a class="case-card reveal" href="cases.html#case-irina">
+        <span class="case-card-num">1 100 000 ₽</span>
+        <span class="case-card-title">Услуги, на которые записываются и которые покупают</span>
+        <span class="case-card-tag">Оборот за ноябрь</span>
+      </a>
+      <a class="case-card reveal" href="cases.html#case-nastya">
+        <span class="case-card-num">110 000 ₽</span>
+        <span class="case-card-title">5–7 продаж в день без участия в каждой покупке</span>
+        <span class="case-card-tag">Мини-продукт через автоворонку</span>
+      </a>
+      <a class="case-card reveal" href="cases.html#case-guzel">
+        <span class="case-card-num">30 000 ₽</span>
+        <span class="case-card-title">Живой блог. Свой продукт. Реальные продажи.</span>
+        <span class="case-card-tag">За неделю на своём мини-продукте</span>
+      </a>
+      <a class="case-card reveal" href="cases.html#case-studio">
         <span class="case-card-num">253 800 ₽</span>
-        <span class="case-card-title">Рост выручки за 3 месяца</span>
-        <span class="case-card-tag">Кейс клиента, бьюти-студия</span>
+        <span class="case-card-title">С нового аккаунта — до полной записи</span>
+        <span class="case-card-tag">Выручка студии на третьем месяце</span>
       </a>
-      <a class="case-card reveal" href="cases.html">
+      <a class="case-card reveal" href="cases.html#case-tourism">
         <span class="case-card-num">60%</span>
-        <span class="case-card-title">Instagram стал каналом продаж</span>
-        <span class="case-card-tag">Отзыв клиента, туристическая компания</span>
-      </a>
-      <a class="case-card reveal" href="cases.html">
-        <span class="case-card-num">130k</span>
-        <span class="case-card-title">В практикум зашёл крупный блогер</span>
-        <span class="case-card-tag">Из практикума</span>
+        <span class="case-card-title">Две базы отдыха. Блог стал каналом продаж.</span>
+        <span class="case-card-tag">Сезонных продаж через Instagram</span>
       </a>
     </div>
     <div class="cases-cta">
       <a href="cases.html" class="btn btn-ghost">Смотреть все кейсы и отзывы</a>
     </div>
-  </div>
-</section>
-
-<section class="final">
-  <div class="wrap">
-    <h2>Тебе не нужно <span class="hl">становиться идеальной</span>, чтобы иметь право проявляться</h2>
-    <p>Именно твоя неидеальность делает тебя уникальной и настоящей.</p>
-    <a href="#format" class="btn">Выбрать формат работы</a>
   </div>
 </section>
 
@@ -981,7 +1032,7 @@
         aboutGrid.style.maxHeight = null;
         aboutGrid.classList.remove('open');
         aboutToggle.classList.remove('open');
-        aboutToggle.firstChild.textContent = 'Читать всю историю';
+        aboutToggle.firstChild.textContent = 'Нажми, чтобы узнать обо мне больше';
       } else {
         aboutGrid.classList.add('open');
         aboutGrid.style.maxHeight = aboutGrid.scrollHeight + 'px';

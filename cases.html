@@ -518,6 +518,7 @@
     border-radius:18px;
     overflow:hidden;
     transition:border-color .3s;
+    scroll-margin-top:110px;
   }
   .case-item.open{border-color:var(--pink-dim);}
   .case-q{
@@ -594,53 +595,176 @@
   <div class="wrap">
     <div class="case-list">
 
-      <div class="case-item reveal open">
+      <div class="case-item reveal open" id="case-irina">
         <button class="case-q">
           <span class="num">01</span>
           <span>
             <span class="case-tag">Кейс клиента</span>
-            <span class="case-title-text">Рост выручки за 3 месяца</span>
+            <span class="case-title-text">Услуги, на которые записываются и которые покупают</span>
           </span>
           <span class="plus">+</span>
         </button>
         <div class="case-a">
           <div class="case-a-inner">
+            <p>В клиентском проекте Ирины оборот за ноябрь составил 1 100 000 ₽. Отдельная акция с 24 ноября по 15 декабря принесла 550 000 ₽ оборота и около 300 000 ₽ чистой прибыли.</p>
+            <p>За этими цифрами — обращения, запись на услуги и покупки. Работа с блогом здесь была связана с конкретной задачей: представить услугу, заинтересовать предложением и помочь человеку решиться на запись.</p>
             <div class="case-stats">
-              <div class="case-stat"><span class="num">87 875 ₽</span><span class="label">выручка в первый месяц (ноябрь)</span></div>
-              <div class="case-stat"><span class="num">93 200 ₽</span><span class="label">выручка во второй месяц (декабрь)</span></div>
-              <div class="case-stat"><span class="num">253 800 ₽</span><span class="label">выручка в третий месяц (январь)</span></div>
-              <div class="case-stat"><span class="num">&gt;100 000 ₽</span><span class="label">чистая прибыль за 3 месяца</span></div>
+              <div class="case-stat"><span class="num">1 100 000 ₽</span><span class="label">оборот за ноябрь</span></div>
+              <div class="case-stat"><span class="num">550 000 ₽</span><span class="label">оборот по акции</span></div>
+              <div class="case-stat"><span class="num">≈300 000 ₽</span><span class="label">чистая прибыль по акции</span></div>
             </div>
-            <p class="case-quote"><span class="who">Клиентка, бьюти-студия</span>Первый месяц вышли в ноль, но уже на третий — рост выручки до 253 800 ₽ и чистая прибыль больше 100 тыс ₽. Мои опасения не оправдались: с нуля дошли до полного букинга.</p>
           </div>
         </div>
       </div>
 
-      <div class="case-item reveal">
+      <div class="case-item reveal" id="case-nastya">
         <button class="case-q">
           <span class="num">02</span>
           <span>
-            <span class="case-tag">Отзыв клиента</span>
+            <span class="case-tag">Мини-продукт и автоворонка</span>
+            <span class="case-title-text">5–7 продаж в день без участия в каждой покупке</span>
+          </span>
+          <span class="plus">+</span>
+        </button>
+        <div class="case-a">
+          <div class="case-a-inner">
+            <p>Настя работала куратором в онлайн-школе и хотела развивать своё. Но продажи из блога были нестабильными, трафик — нерегулярным, а понятного пути клиента к покупке не было.</p>
+            <p>Вместе мы запустили мини-продукт через автоворонку. Результат — 110 000 ₽ и 5–7 продаж в день без её личного участия в каждой покупке и без обратной связи по продукту.</p>
+            <p>Она рассчитывала окупить работу со специалистом. А получила продукт, который продолжил продаваться через настроенную систему.</p>
+            <div class="case-stats">
+              <div class="case-stat"><span class="num">110 000 ₽</span><span class="label">продажи мини-продукта</span></div>
+              <div class="case-stat"><span class="num">5–7</span><span class="label">продаж в день</span></div>
+            </div>
+            <p class="case-quote"><span class="who">Настя</span>Марафон сейчас без моего участия продается, все выстроено и это то, что я хотела.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item reveal" id="case-guzel">
+        <button class="case-q">
+          <span class="num">03</span>
+          <span>
+            <span class="case-tag">Личный результат</span>
+            <span class="case-title-text">Живой блог. Свой продукт. Реальные продажи.</span>
+          </span>
+          <span class="plus">+</span>
+        </button>
+        <div class="case-a">
+          <div class="case-a-inner">
+            <p>В моём блоге есть танцы, личные истории, мысли и опыт, который может пригодиться другим. Мне важно оставаться собой — и при этом я создаю и продаю собственные продукты.</p>
+            <p>Один из моих мини-продуктов принёс 30 000 ₽ за неделю. Поэтому в работе с твоей идеей, упаковкой и продажами я опираюсь и на клиентские проекты, и на собственный опыт автора.</p>
+            <div class="case-stats">
+              <div class="case-stat"><span class="num">30 000 ₽</span><span class="label">за неделю на своём мини-продукте</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item reveal" id="case-studio">
+        <button class="case-q">
+          <span class="num">04</span>
+          <span>
+            <span class="case-tag">Кейс клиента</span>
+            <span class="case-title-text">С нового аккаунта — до полной записи</span>
+          </span>
+          <span class="plus">+</span>
+        </button>
+        <div class="case-a">
+          <div class="case-a-inner">
+            <p>Владелица сомневалась, стоит ли создавать отдельную страницу для новой студии: боялась, что набирать аудиторию и клиентов с нуля придётся долго.</p>
+            <p>Мы выбрали отдельный аккаунт. В первый месяц выручка составила 87 875 ₽, во второй — 93 200 ₽, в третий — 253 800 ₽. Чистая прибыль на третьем месяце превысила 100 000 ₽.</p>
+            <p>Запись на коррекцию фигуры заполнилась настолько, что рекламу этого направления отключили.</p>
+            <div class="case-stats">
+              <div class="case-stat"><span class="num">87 875 ₽</span><span class="label">выручка в первый месяц</span></div>
+              <div class="case-stat"><span class="num">93 200 ₽</span><span class="label">выручка во второй месяц</span></div>
+              <div class="case-stat"><span class="num">253 800 ₽</span><span class="label">выручка в третий месяц</span></div>
+              <div class="case-stat"><span class="num">&gt;100 000 ₽</span><span class="label">чистая прибыль на третьем месяце</span></div>
+            </div>
+            <p class="case-quote"><span class="who">Клиентка, бьюти-студия</span>На третий месяц работы уже отключали рекламу по коррекции фигуры, т.к. был фулбукинг.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item reveal" id="case-tourism">
+        <button class="case-q">
+          <span class="num">05</span>
+          <span>
+            <span class="case-tag">Кейс клиента</span>
             <span class="case-title-text">Instagram стал каналом продаж</span>
           </span>
           <span class="plus">+</span>
         </button>
         <div class="case-a">
           <div class="case-a-inner">
+            <p>У владельцев «Дрим бей» и «Жемчужного берега» уже были два аккаунта. Но не хватало времени и профессиональных знаний, чтобы заниматься ими перед летним сезоном.</p>
+            <p>За три месяца нашей работы один аккаунт вырос примерно с 6 000 до 11 000 подписчиков, второй — с 7 000 до 14 000.</p>
+            <p>По итогам сезона компания отметила: 60% продаж прошли через Instagram.</p>
+            <p>Гости получали быстрые ответы в директе, новые подписчики — приветствие и нужную информацию. Общение в блоге помогало разобраться в предложении и выбрать отдых.</p>
             <div class="case-stats">
               <div class="case-stat"><span class="num">6 000 → 11 000</span><span class="label">подписчиков, первый аккаунт</span></div>
               <div class="case-stat"><span class="num">7 000 → 14 000</span><span class="label">подписчиков, второй аккаунт</span></div>
               <div class="case-stat"><span class="num">60%</span><span class="label">продаж пришло из Instagram</span></div>
               <div class="case-stat"><span class="num">3 мес</span><span class="label">срок совместной работы</span></div>
             </div>
-            <p class="case-quote"><span class="who">Ирина, туристическая компания</span>За 3 месяца оба наших аккаунта выросли почти вдвое, а 60% продаж в сезоне пришли из Instagram. Гуля стала ещё одним членом команды — ждём её обратно в следующем сезоне!</p>
+            <p class="case-quote"><span class="who">Дрим бей и Жемчужный берег</span>За 3 месяца оба наших аккаунта выросли почти вдвое, а 60% продаж в сезоне пришли из Instagram. Гуля стала ещё одним членом команды — ждём её обратно в следующем сезоне!</p>
           </div>
         </div>
       </div>
 
       <div class="case-item reveal">
         <button class="case-q">
-          <span class="num">03</span>
+          <span class="num">06</span>
+          <span>
+            <span class="case-tag">Участница обучения Гузель</span>
+            <span class="case-title-text">Решилась показать себя</span>
+          </span>
+          <span class="plus">+</span>
+        </button>
+        <div class="case-a">
+          <div class="case-a-inner">
+            <p>Участница увидела Гузель в видео с танцами, оставила комментарий, разговорилась с ней и пришла на обучение. До этого боялась показывать себя: даже создала отдельную страницу для первого Reels. Потом решилась перенести видео в основной аккаунт и обнаружила, что никто её не осудил.</p>
+            <p class="case-quote"><span class="who">Участница обучения Гузель</span>Но самое главное я показала миру себя, чего очень боялась.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item reveal">
+        <button class="case-q">
+          <span class="num">07</span>
+          <span>
+            <span class="case-tag">Участница челленджа Гузель</span>
+            <span class="case-title-text">«Самое главное — получилось не слиться»</span>
+          </span>
+          <span class="plus">+</span>
+        </button>
+        <div class="case-a">
+          <div class="case-a-inner">
+            <p>Участница челленджа каждый день выкладывала видео: в пробный режим или на основную страницу. В группе находились идеи, мотивация и поддержка.</p>
+            <p class="case-quote"><span class="who">Участница челленджа Гузель</span>Каждый день выкладывала видео то в пробный режим, то на основную страницу.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item reveal">
+        <button class="case-q">
+          <span class="num">08</span>
+          <span>
+            <span class="case-tag">Участница челленджа Гузель, анонимно</span>
+            <span class="case-title-text">Начала снимать разговорные Reels</span>
+          </span>
+          <span class="plus">+</span>
+        </button>
+        <div class="case-a">
+          <div class="case-a-inner">
+            <p>После челленджа участница рассказала, что её канал начал заполняться разговорными Reels. Появились толчок к действию и понимание, как делать видео лучше.</p>
+            <p class="case-quote"><span class="who">Участница челленджа Гузель, анонимно</span>Благодаря челленджу мой канал начал заполняться разговорными рилсами.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="case-item reveal">
+        <button class="case-q">
+          <span class="num">09</span>
           <span>
             <span class="case-tag">Из практикума</span>
             <span class="case-title-text">В практикум зашёл крупный блогер</span>
@@ -649,6 +773,7 @@
         </button>
         <div class="case-a">
           <div class="case-a-inner">
+            <p>130 000 — это аудитория самого блогера, а не результат ученицы Гузель и не заработок от практикума.</p>
             <p class="case-quote"><span class="who">Гузель</span>На днях в мой практикум зашёл крупный блогер и эксперт по Reels — с аудиторией 130 тысяч. Для меня это честь и подтверждение, что мы на правильном пути.</p>
           </div>
         </div>
@@ -656,7 +781,7 @@
 
       <div class="case-item reveal">
         <button class="case-q">
-          <span class="num">04</span>
+          <span class="num">10</span>
           <span>
             <span class="case-tag">Отзывы</span>
             <span class="case-title-text">Ещё отзывы и комментарии</span>
@@ -675,7 +800,7 @@
 
       <div class="case-item reveal">
         <button class="case-q">
-          <span class="num">05</span>
+          <span class="num">11</span>
           <span>
             <span class="case-tag">Отзывы</span>
             <span class="case-title-text">Комментарии подписчиков</span>
@@ -762,6 +887,25 @@
       }
     });
   });
+
+  function openCaseFromHash(){
+    const hash = window.location.hash;
+    if(!hash) return;
+    const target = document.querySelector(hash);
+    if(!target || !target.classList.contains('case-item')) return;
+    document.querySelectorAll('.case-item.open').forEach(open=>{
+      if(open !== target){
+        open.classList.remove('open');
+        open.querySelector('.case-a').style.maxHeight = null;
+      }
+    });
+    target.classList.add('open');
+    const a = target.querySelector('.case-a');
+    a.style.maxHeight = a.scrollHeight + 'px';
+    setTimeout(()=>{ target.scrollIntoView({behavior:'smooth', block:'start'}); }, 60);
+  }
+  openCaseFromHash();
+  window.addEventListener('hashchange', openCaseFromHash);
 
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
